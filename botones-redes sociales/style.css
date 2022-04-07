@@ -35,3 +35,9 @@ body {
 .buttons a:hover {
   transform: scale(1.5);
 }
+
+.redes {
+  height: 200px;
+  border-color: #84acbf;
+  padding: 30px;
+}
