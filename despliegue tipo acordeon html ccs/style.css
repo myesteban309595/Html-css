@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=raleway:wght@400;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'raleway', sans-serif;
+}
+
+.contenedor-acordeon {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 80px;
+
+}
+
+.contenedor-acordeon h2{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+
+.acordeon {
+  background: #fff;
+}
+
+.acordeon label{
+  display: block; /*permite visualizar en bloque*/
+  padding: 20px;
+  font-size: 20px;
+  background: #1c1c1c;
+  color: #fff;
+  cursor: pointer; /*pone la manito cuando nos posicionamos sobre*/
+  margin-bottom: 2px;
+  transition: all 300ms ease; /* genera una transicion al abrir*/
+}
+
+.acordeon label:hover{
+  background: #2e2e2e; /* cambio de color al posicionar sobre*/
+}
+
+.acordeon .contenido-acordeon{
+  padding: 0px;
+  margin: 0px 20px;
+  max-height: 0px;
+  overflow: hidden; /* creamos el efecto de ocultar*/
+  transition: all 100ms ease;
+}
+
+/* para poder visualizar el contenido oculto*/
+
+.btn-acordeon:checked ~ .contenido-acordeon{
+  max-height: 600px;
+  padding: 15px 0px;
+}
+
+/* para eliminar el button radio que aprecer*/
+
+.btn-acordeon{
+  display: none;
+}
+
+/*para responsitive a tablet o cel*/
+@media screen and (max-width:900px) {
+  .contenedor-acordeon{
+    width: 90%; /*para que tenga un amrgen a los costados*/
+  }
+}
